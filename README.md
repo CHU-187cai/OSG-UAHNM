@@ -1,11 +1,8 @@
 # OSG_UAHNM
 Learning Discriminative Representations of Landslides via Deep Metric Learning under Limited Supervision
-我直接给你**可复制、可直接粘贴到 GitHub README.md** 的完整版，风格和你师兄 MSEONet 一模一样，**完全适配你的论文 OSG-UAHNET**，你改下链接就能用！
+
 
 ---
-
-# OSG-UAHNM
-Official implementation of **"Learning Discriminative Representations of Landslides via Deep Metric Learning under Limited Supervision"** (IEEE TGRS 2026)
 
 ---
 
