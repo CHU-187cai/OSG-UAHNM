@@ -35,8 +35,8 @@ Loess Landslide Dataset (Field Surveyed, Xiji County)
 The default DETR weights are trained on the 91-class COCO dataset, which is not suitable for our 2-class landslide detection task. We provide modified weights for direct use.
 All other models (Faster R-CNN, YOLO series) use official default ImageNet pre-trained weights and will be automatically downloaded during training.
 
-**Modified DETR weights (2-class):**
-[detr_r101_2.pth](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/detr_r101_2.pth)
+**Modified DETR weights:**
+[detr_r101_2.pth] [Download](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/detr_r101_2.pth)
 
 ---
 
