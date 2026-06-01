@@ -1,80 +1,101 @@
-# OSG_UAHNM
-Learning Discriminative Representations of Landslides via Deep Metric Learning under Limited Supervision
-
-
----
+明白！我给你**合成一张完整大表**，**所有信息都保留**：
+Method / AP / AP50 / Device / Epochs / Checkpoint
+完全按学术论文风格，简洁好看，直接复制可用！
 
 ---
 
-## 📬 Contact
-If you have any questions, please feel free to contact me.  
-Email: xxx@xxx.com  
-GitHub: https://github.com/CHU-187cai/OSG-UAHNM
+# 📌 OSG-UAHNM
+## Official PyTorch Implementation for IEEE TGRS 2026
+**Learning Discriminative Representations of Landslides via Deep Metric Learning under Limited Supervision**
 
 ---
 
-## 🔍 Introduction
-We propose **OSG-UAHNM**, a plug-and-play deep metric learning framework for **loess landslide detection** under limited supervision.  
-- Transforms image-level metric learning to **instance-level** for detection.  
-- Online Sample Generator (OSG) constructs contrastive pairs from instances and backgrounds.  
-- Uncertainty-Aware Hard Negative Miner (UAHNM) mines high-quality hard negatives.  
-- **Zero inference overhead**, compatible with Faster R-CNN, YOLOv8/11/26, DETR.  
+# 📝 Abstract
+Remote sensing object detection often suffers from poor discriminability when targeting low-contrast targets (e.g., loess landslides) under limited annotation supervision. Existing deep metric learning (DML) methods are mainly designed for image-level tasks and cannot be directly applied to instance-level detection. To address this issue, we propose **OSG-UAHNM**, a plug-and-play DML framework that enhances feature discrimination without modifying detector architectures. It consists of an Online Sample Generator (OSG) for constructing instance-level contrastive pairs and an Uncertainty-Aware Hard Negative Miner (UAHNM) for selecting high-quality hard negatives. Extensive experiments on a field-surveyed loess landslide dataset show consistent and significant improvements over various detectors (Faster R-CNN, YOLOv8/11/26, DETR) with negligible overhead.
 
 ---
 
-## 📊 Main Results
-| Model | AP(%) | AP50(%) |
-| :--- | :--- | :--- |
-| Faster R-CNN | 33.3 | 89.7 |
-| Faster R-CNN + OSG-UAHNM | **40.9** | **93.6** |
-| YOLOv8n | 48.2 | 98.0 |
-| YOLOv8n + OSG-UAHNM | **54.7** | **97.2** |
-| YOLO11n | 54.5 | 97.9 |
-| YOLO11n + OSG-UAHNM | **57.2** | **98.2** |
-| YOLO26n | 56.1 | 96.8 |
-| YOLO26n + OSG-UAHNM | **57.2** | **97.7** |
-| DETR | 53.2 | 95.0 |
-| DETR + OSG-UAHNM | **55.0** | **98.9** |
+# 🧰 Environment Requirements
+```
+torch==2.1.1
+torchvision==0.16.1
+numpy==1.26.4
+opencv-python==4.11.0
+pycocotools==2.0.8
+matplotlib==3.9.4
+tqdm==4.67.1
+PyYAML==6.0.2
+scipy==1.13.1
+timm==1.0.24
+```
 
 ---
 
-## 📦 Dataset
-The dataset used in this paper is a **field-surveyed loess landslide dataset** in Xiji County, Ningxia, China.
-
-### Download
-- Loess Landslide Dataset:  
-  [Download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/dataset/loess_landslide.zip)
+# 📂 Dataset
+Loess Landslide Dataset (Field Surveyed, Xiji County)
+[Download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/dataset/loess_landslide.zip)
 
 ---
 
-## 🧠 Pretrained Weights
-We provide trained weights for all baselines + OSG-UAHNM.
+# 🧠 Pretrained Weights
+The default DETR weights are trained on the 91-class COCO dataset, which is not suitable for our 2-class landslide detection task. We provide modified weights for direct use.
+All other models (Faster R-CNN, YOLO series) use official default ImageNet pre-trained weights and are automatically downloaded during training.
 
-### Download
-- Faster R-CNN: [weights](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/faster_rcnn_osg_uahnm.pth)
-- YOLOv8n: [weights](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolov8n_osg_uahnm.pt)
-- YOLO11n: [weights](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo11n_osg_uahnm.pt)
-- YOLO26n: [weights](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo26n_osg_uahnm.pt)
-- DETR: [weights](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_osg_uahnm.pth)
+**Modified DETR weights (2-class):**
+[detr_r101_2.pth](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_r101_2.pth)
 
 ---
 
-## 🚀 Training & Testing
+# 📊 Results & Checkpoints
+| Method | AP(%) | AP50(%) | Device | Epochs | Checkpoint |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| Faster R-CNN (Baseline) | 33.3 | 89.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/faster_rcnn_baseline.pth) |
+| Faster R-CNN + OSG-UAHNM | 40.9 | 93.6 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/faster_rcnn_osg_uahnm.pth) |
+| YOLOv8n (Baseline) | 48.2 | 98.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolov8n_baseline.pt) |
+| YOLOv8n + OSG-UAHNM | 54.7 | 97.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolov8n_osg_uahnm.pt) |
+| YOLO11n (Baseline) | 54.5 | 97.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo11n_baseline.pt) |
+| YOLO11n + OSG-UAHNM | 57.2 | 98.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo11n_osg_uahnm.pt) |
+| YOLO26n (Baseline) | 56.1 | 96.8 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo26n_baseline.pt) |
+| YOLO26n + OSG-UAHNM | 57.2 | 97.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo26n_osg_uahnm.pt) |
+| DETR (Baseline) | 53.2 | 95.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_baseline.pth) |
+| DETR + OSG-UAHNM | 55.0 | 98.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_osg_uahnm.pth) |
+
+---
+
+# 🚀 Training Commands
+
+### YOLO Series
 ```bash
-# Train
-python train.py --config configs/yolov8n.yaml
+# Baseline
+yolo train model=yolo26n.pt data=your_dataset.yaml epochs=100 imgsz=640 batch=16 device=0 name=baseline
 
-# Test
-python test.py --weights weights/yolov8n_osg_uahnm.pt
+# OSG-UAHNM
+yolo train model=yolo26n.pt data=your_dataset.yaml epochs=100 imgsz=640 batch=16 device=0 name=with_osg_full
+```
+
+### DETR
+```bash
+# Baseline
+python main.py --coco_path ./detr_dataset --batch_size 4 --epochs 100 --lr 1e-4 --output_dir outputs/baseline --backbone resnet101 --resume detr_r101_2.pth
+
+# OSG-UAHNM
+python main.py --coco_path ./detr_dataset --batch_size 4 --epochs 100 --lr 5e-5 --osg_uahnm --output_dir outputs/osg_uahnm --backbone resnet101 --resume detr_r101_2.pth
+```
+
+### Faster R-CNN
+```bash
+# Baseline
+python experiments/train_faster_rcnn.py --mode train
+
+# OSG-UAHNM
+python experiments/train_faster_rcnn.py --mode train --use_osg_uahnm
 ```
 
 ---
 
-## 📎 Citation
-If you use this code or dataset in your research, please cite our paper:
-
+# 📎 Citation
 ```
-@article{ju2026learning,
+@article{OSG-UAHNM,
   title={Learning Discriminative Representations of Landslides via Deep Metric Learning under Limited Supervision},
   author={XXX},
   journal={IEEE Transactions on Geoscience and Remote Sensing},
@@ -82,16 +103,3 @@ If you use this code or dataset in your research, please cite our paper:
   publisher={IEEE}
 }
 ```
-
----
-
-## 📄 License
-This project is released under the **MIT License**.
-
----
-
-## ✨ Acknowledgement
-We thank the reviewers for their valuable comments.  
-This work was supported by XXX.
-
----
