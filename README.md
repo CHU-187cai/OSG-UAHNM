@@ -27,7 +27,7 @@ timm==1.0.24
 
 # 📂 Dataset
 Loess Landslide Dataset (Field Surveyed, Xiji County)
-[Download](https://github.com/CHU-187cai/Jack-Cai/raw/main/loess_landslide.zip)
+[Download](https://github.com/CHU-187cai/Jack-Cai/raw/master/loess_landslide.zip)
 
 ---
 
