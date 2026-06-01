@@ -76,12 +76,12 @@ python experiments/train_faster_rcnn.py --mode train --use_osg_uahnm
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | Faster R-CNN (Baseline) | 33.3 | 89.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/faster_rcnn(baseline).pth) |
 | Faster R-CNN + OSG-UAHNM | 40.9 | 93.6 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/faster_rcnn(ours).pth) |
-| YOLOv8n (Baseline) | 48.2 | 98.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolov8n(baseline).pt) |
-| YOLOv8n + OSG-UAHNM | 54.7 | 97.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolov8n(ours).pt) |
-| YOLO11n (Baseline) | 54.5 | 97.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolo11n(baseline).pt) |
-| YOLO11n + OSG-UAHNM | 57.2 | 98.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolo11n(ours).pt) |
-| YOLO26n (Baseline) | 56.1 | 96.8 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolo26n(baseline).pt) |
-| YOLO26n + OSG-UAHNM | 57.2 | 97.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolo26n(ours).pt) |
+| YOLOv8n (Baseline) | 48.2 | 98.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolov8(baseline).pt) |
+| YOLOv8n + OSG-UAHNM | 54.7 | 97.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolov8(ours).pt) |
+| YOLO11n (Baseline) | 54.5 | 97.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolo11(baseline).pt) |
+| YOLO11n + OSG-UAHNM | 57.2 | 98.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolo11(ours).pt) |
+| YOLO26n (Baseline) | 56.1 | 96.8 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolo26(baseline).pt) |
+| YOLO26n + OSG-UAHNM | 57.2 | 97.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolo26(ours).pt) |
 | DETR (Baseline) | 53.2 | 95.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/detr(baseline).pth) |
 | DETR + OSG-UAHNM | 55.0 | 98.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/detr(ours).pth) |
 
