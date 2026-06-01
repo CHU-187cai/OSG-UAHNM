@@ -8,6 +8,7 @@
 Remote sensing object detection often suffers from poor discriminability when targeting low-contrast targets (e.g., loess landslides) under limited supervision. Existing deep metric learning (DML) methods are mainly designed for image-level tasks and cannot be directly applied to instance-level detection. To address this issue, we propose **OSG-UAHNM**, a plug-and-play DML framework for enhancing feature discrimination without modifying detector architectures. It consists of an Online Sample Generator (OSG) and an Uncertainty-Aware Hard Negative Miner (UAHNM). Extensive experiments on a loess landslide dataset show consistent and significant improvements over various detectors with negligible overhead.
 
 ---
+![Overview](https://raw.githubusercontent.com/CHU-187cai/Jack-Cai/main/fig1.jpg)
 
 # 🧰 Environment Requirements
 ```
