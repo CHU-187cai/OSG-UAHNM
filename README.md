@@ -54,10 +54,10 @@ yolo train model=yolo26n.pt data=your_dataset.yaml epochs=100 imgsz=640 batch=16
 ### DETR
 ```bash
 # Baseline
-python main.py --coco_path ./detr_dataset --batch_size 4 --epochs 100 --lr 1e-4 --output_dir outputs/baseline --backbone resnet101 --resume detr_r101_2.pth
+python main.py --coco_path ./detr_dataset --batch_size 8 --epochs 100 --lr 1e-4 --output_dir outputs/baseline --backbone resnet101 --resume detr_r101_2.pth
 
 # OSG-UAHNM
-python main.py --coco_path ./detr_dataset --batch_size 4 --epochs 100 --lr 5e-5 --osg_uahnm --output_dir outputs/osg_uahnm --backbone resnet101 --resume detr_r101_2.pth
+python main.py --coco_path ./detr_dataset --batch_size 8 --epochs 100 --lr 5e-5 --osg_uahnm --output_dir outputs/osg_uahnm --backbone resnet101 --resume detr_r101_2.pth
 ```
 
 ### Faster R-CNN
