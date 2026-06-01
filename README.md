@@ -89,11 +89,8 @@ python experiments/train_faster_rcnn.py --mode train --use_osg_uahnm
 ---
 ```markdown
 ## Qualitative Results
-![Visualization Results](Jack-Cai/fig5.png)
+![Overview](https://raw.githubusercontent.com/CHU-187cai/Jack-Cai/main/fig5.jpg)
 ```
-
-**直接复制粘贴到上面那个位置即可显示！**
-
 ---
 
 # 📎 Citation
@@ -109,15 +106,3 @@ python experiments/train_faster_rcnn.py --mode train --use_osg_uahnm
 
 ---
 
-## ✅ 最终顺序（完全=师兄）
-1. 标题
-2. 摘要
-3. 环境
-4. 数据集
-5. 预训练权重
-6. **训练命令（Usage）**
-7. **结果表格（含所有权重）**
-8. **结果图**
-9. 引用
-
-你直接复制，完美可用！
