@@ -27,7 +27,7 @@ timm==1.0.24
 
 # 📂 Dataset
 Loess Landslide Dataset (Field Surveyed, Xiji County)
-[Download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/dataset/loess_landslide.zip)
+[Download](https://github.com/CHU-187cai/Jack-Cai/raw/main/loess_landslide.zip)
 
 ---
 
@@ -36,7 +36,7 @@ The default DETR weights are trained on the 91-class COCO dataset, which is not 
 All other models (Faster R-CNN, YOLO series) use official default ImageNet pre-trained weights and will be automatically downloaded during training.
 
 **Modified DETR weights (2-class):**
-[detr_r101_2.pth](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_r101_2.pth)
+[detr_r101_2.pth](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/detr_r101_2.pth)
 
 ---
 
@@ -74,16 +74,16 @@ python experiments/train_faster_rcnn.py --mode train --use_osg_uahnm
 # 📊 Results & Checkpoints
 | Method | AP(%) | AP50(%) | Device | Epochs | Checkpoint |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| Faster R-CNN (Baseline) | 33.3 | 89.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/faster_rcnn_baseline.pth) |
-| Faster R-CNN + OSG-UAHNM | 40.9 | 93.6 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/faster_rcnn_osg_uahnm.pth) |
-| YOLOv8n (Baseline) | 48.2 | 98.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolov8n_baseline.pt) |
-| YOLOv8n + OSG-UAHNM | 54.7 | 97.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolov8n_osg_uahnm.pt) |
-| YOLO11n (Baseline) | 54.5 | 97.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo11n_baseline.pt) |
-| YOLO11n + OSG-UAHNM | 57.2 | 98.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo11n_osg_uahnm.pt) |
-| YOLO26n (Baseline) | 56.1 | 96.8 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo26n_baseline.pt) |
-| YOLO26n + OSG-UAHNM | 57.2 | 97.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo26n_osg_uahnm.pt) |
-| DETR (Baseline) | 53.2 | 95.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_baseline.pth) |
-| DETR + OSG-UAHNM | 55.0 | 98.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_osg_uahnm.pth) |
+| Faster R-CNN (Baseline) | 33.3 | 89.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/faster_rcnn_baseline.pth) |
+| Faster R-CNN + OSG-UAHNM | 40.9 | 93.6 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/faster_rcnn_osg_uahnm.pth) |
+| YOLOv8n (Baseline) | 48.2 | 98.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/yolov8n_baseline.pt) |
+| YOLOv8n + OSG-UAHNM | 54.7 | 97.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/yolov8n_osg_uahnm.pt) |
+| YOLO11n (Baseline) | 54.5 | 97.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/yolo11n_baseline.pt) |
+| YOLO11n + OSG-UAHNM | 57.2 | 98.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/yolo11n_osg_uahnm.pt) |
+| YOLO26n (Baseline) | 56.1 | 96.8 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/yolo26n_baseline.pt) |
+| YOLO26n + OSG-UAHNM | 57.2 | 97.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/yolo26n_osg_uahnm.pt) |
+| DETR (Baseline) | 53.2 | 95.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/detr_baseline.pth) |
+| DETR + OSG-UAHNM | 55.0 | 98.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/detr_osg_uahnm.pth) |
 
 ---
 ![Overview](https://raw.githubusercontent.com/CHU-187cai/Jack-Cai/main/fig5.jpg)
