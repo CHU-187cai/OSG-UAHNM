@@ -75,7 +75,7 @@ python experiments/train_faster_rcnn.py --mode train --use_osg_uahnm
 | Method | AP(%) | AP50(%) | Device | Epochs | Checkpoint |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | Faster R-CNN (Baseline) | 33.3 | 89.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/faster_rcnn(baseline).pth) |
-| Faster R-CNN + OSG-UAHNM | 40.9 | 93.6 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/weights/faster_rcnn(ours).pth) |
+| Faster R-CNN + OSG-UAHNM | 40.9 | 93.6 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/faster_rcnn(ours).pth) |
 | YOLOv8n (Baseline) | 48.2 | 98.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolov8n(baseline).pt) |
 | YOLOv8n + OSG-UAHNM | 54.7 | 97.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolov8n(ours).pt) |
 | YOLO11n (Baseline) | 54.5 | 97.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/Jack-Cai/raw/master/yolo11n(baseline).pt) |
