@@ -87,9 +87,6 @@ python experiments/train_faster_rcnn.py --mode train --use_osg_uahnm
 | DETR + OSG-UAHNM | 55.0 | 98.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_osg_uahnm.pth) |
 
 ---
-```markdown
-## Qualitative Results
-```
 ![Overview](https://raw.githubusercontent.com/CHU-187cai/Jack-Cai/main/fig5.jpg)
 ---
 
