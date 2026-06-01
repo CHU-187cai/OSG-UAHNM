@@ -1,5 +1,7 @@
 # 📌 Learning Discriminative Representations of Landslides via Deep Metric Learning under Limited Supervision
-**OSG-UAHNM**
+<div align="center" style="font-size:24px; font-weight:bold; margin:10px 0;">
+OSG-UAHNM
+</div>
 
 ---
 
