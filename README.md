@@ -1,6 +1,3 @@
-
----
-
 # 📌 OSG-UAHNM
 ## Official PyTorch Implementation for IEEE TGRS 2026
 **Learning Discriminative Representations of Landslides via Deep Metric Learning under Limited Supervision**
@@ -8,7 +5,7 @@
 ---
 
 # 📝 Abstract
-Remote sensing object detection often suffers from poor discriminability when targeting low-contrast targets (e.g., loess landslides) under limited annotation supervision. Existing deep metric learning (DML) methods are mainly designed for image-level tasks and cannot be directly applied to instance-level detection. To address this issue, we propose **OSG-UAHNM**, a plug-and-play DML framework that enhances feature discrimination without modifying detector architectures. It consists of an Online Sample Generator (OSG) for constructing instance-level contrastive pairs and an Uncertainty-Aware Hard Negative Miner (UAHNM) for selecting high-quality hard negatives. Extensive experiments on a field-surveyed loess landslide dataset show consistent and significant improvements over various detectors (Faster R-CNN, YOLOv8/11/26, DETR) with negligible overhead.
+Remote sensing object detection often suffers from poor discriminability when targeting low-contrast targets (e.g., loess landslides) under limited supervision. Existing deep metric learning (DML) methods are mainly designed for image-level tasks and cannot be directly applied to instance-level detection. To address this issue, we propose **OSG-UAHNM**, a plug-and-play DML framework for enhancing feature discrimination without modifying detector architectures. It consists of an Online Sample Generator (OSG) and an Uncertainty-Aware Hard Negative Miner (UAHNM). Extensive experiments on a loess landslide dataset show consistent and significant improvements over various detectors with negligible overhead.
 
 ---
 
@@ -36,30 +33,14 @@ Loess Landslide Dataset (Field Surveyed, Xiji County)
 
 # 🧠 Pretrained Weights
 The default DETR weights are trained on the 91-class COCO dataset, which is not suitable for our 2-class landslide detection task. We provide modified weights for direct use.
-All other models (Faster R-CNN, YOLO series) use official default ImageNet pre-trained weights and are automatically downloaded during training.
+All other models (Faster R-CNN, YOLO series) use official default ImageNet pre-trained weights and will be automatically downloaded during training.
 
 **Modified DETR weights (2-class):**
 [detr_r101_2.pth](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_r101_2.pth)
 
 ---
 
-# 📊 Results & Checkpoints
-| Method | AP(%) | AP50(%) | Device | Epochs | Checkpoint |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| Faster R-CNN (Baseline) | 33.3 | 89.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/faster_rcnn_baseline.pth) |
-| Faster R-CNN + OSG-UAHNM | 40.9 | 93.6 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/faster_rcnn_osg_uahnm.pth) |
-| YOLOv8n (Baseline) | 48.2 | 98.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolov8n_baseline.pt) |
-| YOLOv8n + OSG-UAHNM | 54.7 | 97.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolov8n_osg_uahnm.pt) |
-| YOLO11n (Baseline) | 54.5 | 97.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo11n_baseline.pt) |
-| YOLO11n + OSG-UAHNM | 57.2 | 98.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo11n_osg_uahnm.pt) |
-| YOLO26n (Baseline) | 56.1 | 96.8 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo26n_baseline.pt) |
-| YOLO26n + OSG-UAHNM | 57.2 | 97.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo26n_osg_uahnm.pt) |
-| DETR (Baseline) | 53.2 | 95.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_baseline.pth) |
-| DETR + OSG-UAHNM | 55.0 | 98.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_osg_uahnm.pth) |
-
----
-
-# 🚀 Training Commands
+# 🚀 Usage (Training Commands)
 
 ### YOLO Series
 ```bash
@@ -90,6 +71,30 @@ python experiments/train_faster_rcnn.py --mode train --use_osg_uahnm
 
 ---
 
+# 📊 Results & Checkpoints
+| Method | AP(%) | AP50(%) | Device | Epochs | Checkpoint |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| Faster R-CNN (Baseline) | 33.3 | 89.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/faster_rcnn_baseline.pth) |
+| Faster R-CNN + OSG-UAHNM | 40.9 | 93.6 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/faster_rcnn_osg_uahnm.pth) |
+| YOLOv8n (Baseline) | 48.2 | 98.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolov8n_baseline.pt) |
+| YOLOv8n + OSG-UAHNM | 54.7 | 97.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolov8n_osg_uahnm.pt) |
+| YOLO11n (Baseline) | 54.5 | 97.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo11n_baseline.pt) |
+| YOLO11n + OSG-UAHNM | 57.2 | 98.2 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo11n_osg_uahnm.pt) |
+| YOLO26n (Baseline) | 56.1 | 96.8 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo26n_baseline.pt) |
+| YOLO26n + OSG-UAHNM | 57.2 | 97.7 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/yolo26n_osg_uahnm.pt) |
+| DETR (Baseline) | 53.2 | 95.0 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_baseline.pth) |
+| DETR + OSG-UAHNM | 55.0 | 98.9 | RTX 4060 | 100 | [download](https://github.com/CHU-187cai/OSG-UAHNM/raw/master/weights/detr_osg_uahnm.pth) |
+
+---
+```markdown
+## Qualitative Results
+![Visualization Results](figs/result.png)
+```
+
+**直接复制粘贴到上面那个位置即可显示！**
+
+---
+
 # 📎 Citation
 ```
 @article{OSG-UAHNM,
@@ -100,3 +105,18 @@ python experiments/train_faster_rcnn.py --mode train --use_osg_uahnm
   publisher={IEEE}
 }
 ```
+
+---
+
+## ✅ 最终顺序（完全=师兄）
+1. 标题
+2. 摘要
+3. 环境
+4. 数据集
+5. 预训练权重
+6. **训练命令（Usage）**
+7. **结果表格（含所有权重）**
+8. **结果图**
+9. 引用
+
+你直接复制，完美可用！
