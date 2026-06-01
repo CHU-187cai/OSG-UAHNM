@@ -1,5 +1,4 @@
 # 📌 OSG-UAHNM
-## Official PyTorch Implementation for IEEE TGRS 2026
 **Learning Discriminative Representations of Landslides via Deep Metric Learning under Limited Supervision**
 
 ---
