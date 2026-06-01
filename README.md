@@ -88,7 +88,7 @@ python experiments/train_faster_rcnn.py --mode train --use_osg_uahnm
 ---
 ```markdown
 ## Qualitative Results
-![Visualization Results](figs/result.png)
+![Visualization Results](Jack-Cai/fig5.png)
 ```
 
 **直接复制粘贴到上面那个位置即可显示！**
