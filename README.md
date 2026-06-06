@@ -96,9 +96,9 @@ python experiments/train_faster_rcnn.py --mode train --use_osg_uahnm
 @article{OSG-UAHNM,
   title={Learning Discriminative Representations of Landslides via Deep Metric Learning under Limited Supervision},
   author={XXX},
-  journal={IEEE Transactions on Geoscience and Remote Sensing},
+  journal={XXX},
   year={2026},
-  publisher={IEEE}
+  publisher={XXX}
 }
 ```
 
